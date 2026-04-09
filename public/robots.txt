@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://orikai.dev
+
+# Sitemaps
+Sitemap: https://orikai.dev/sitemap.xml

@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "label": "AI DEVELOPER",
+    "title": "ORIK —\nAI DEVELOPER",
+    "subtitle": "I build websites, bots & automation —\nfast, smart, with AI",
+    "cta_primary": "Message on Telegram",
+    "cta_secondary": "View Projects"
+  },
+  "services": {
+    "label": "01 / SERVICES",
+    "title": "WHAT I DO",
+    "items": [
+      {
+        "title": "Websites & Landing Pages",
+        "desc": "Fast, responsive, SEO-ready websites built end-to-end"
+      },
+      {
+        "title": "Telegram & WhatsApp Bots",
+        "desc": "AI-powered bots with forms, payments and integrations"
+      },
+      {
+        "title": "Automation",
+        "desc": "n8n, Make, CRM integrations — eliminate manual work"
+      },
+      {
+        "title": "Web Applications",
+        "desc": "SaaS, planners, platforms, subscription models"
+      },
+      {
+        "title": "Custom Software",
+        "desc": "Any idea → working product"
+      }
+    ]
+  },
+  "projects": {
+    "label": "02 / PROJECTS",
+    "title": "CASE STUDIES",
+    "items": [
+      {
+        "title": "Doctor's Business Card Site",
+        "desc": "Medical business card site for a urology surgeon. Telegram booking, map, contacts.",
+        "tags": ["Website", "Healthcare", "Telegram CTA"]
+      },
+      {
+        "title": "HR Bot for Gym",
+        "desc": "Telegram bot for gym trainer hiring. Automates applications and initial screening interviews.",
+        "tags": ["Telegram Bot", "AI", "HR Automation"]
+      },
+      {
+        "title": "Daily Planner",
+        "desc": "Web app with daily planner, yearly overview, notes, and subscription model.",
+        "tags": ["Web App", "SaaS", "Subscription"]
+      }
+    ]
+  },
+  "how": {
+    "label": "03 / PROCESS",
+    "title": "HOW WE WORK",
+    "steps": [
+      { "num": "01", "text": "We discuss your task on Telegram" },
+      { "num": "02", "text": "I propose a solution and timeline" },
+      { "num": "03", "text": "I deliver the finished product" }
+    ]
+  },
+  "about": {
+    "label": "04 / ABOUT",
+    "title": "WHO I AM",
+    "text": "I'm Orik, an AI developer with hands-on experience building products at the intersection of AI and the web. Bots, automation, web apps — from idea to working product. I work fast — AI multiplies development speed."
+  },
+  "contact": {
+    "label": "05 / CONTACT",
+    "title": "GOT A PROJECT?",
+    "text": "Message me on Telegram — I reply within an hour.",
+    "cta": "Message @orhan_yunuszade"
+  }
+}
