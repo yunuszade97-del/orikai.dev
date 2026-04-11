@@ -40,8 +40,8 @@ export async function generateMetadata({
       ? 'Orik — AI Developer | Websites, Bots & Automation'
       : 'Orik — AI-разработчик | Сайты, боты, автоматизация',
     description: isEn
-      ? 'I build websites, Telegram bots and AI automation. Fast, quality, guaranteed. Message on Telegram.'
-      : 'Создаю сайты, Telegram-боты и AI-автоматизацию под ключ. Быстро, качественно, с гарантией.',
+      ? 'Freelance AI developer — Next.js websites, Telegram bots & n8n automation. Fast delivery, quality guaranteed.'
+      : 'AI-разработчик: сайты на Next.js, Telegram-боты, автоматизация на n8n. Быстро, под ключ, с гарантией результата.',
     metadataBase: new URL('https://orikai.dev'),
     alternates: {
       canonical: isEn ? 'https://orikai.dev/en' : 'https://orikai.dev',
@@ -57,25 +57,20 @@ export async function generateMetadata({
         : 'Сайты, боты и автоматизация — быстро, умно, с AI',
       url: isEn ? 'https://orikai.dev/en' : 'https://orikai.dev',
       siteName: 'orikai.dev',
-      images: [{ url: '/og', width: 1200, height: 630 }],
+      images: [{ url: '/og', width: 1200, height: 630, alt: isEn ? 'Orik — AI Developer' : 'Orik — AI-разработчик' }],
       type: 'website',
+      locale: isEn ? 'en_US' : 'ru_RU',
     },
     twitter: {
       card: 'summary_large_image',
       title: isEn ? 'Orik — AI Developer' : 'Orik — AI-разработчик',
-      images: ['/og'],
+      description: isEn
+        ? 'Websites, Telegram bots & AI automation — fast, quality, guaranteed.'
+        : 'Сайты, боты и автоматизация — быстро, с гарантией.',
+      images: [{ url: '/og', alt: isEn ? 'Orik — AI Developer' : 'Orik — AI-разработчик' }],
     },
     robots: { index: true, follow: true },
   }
-}
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Orik',
-  jobTitle: 'AI Developer',
-  url: 'https://orikai.dev',
-  sameAs: ['https://t.me/orhan_yunuszade'],
 }
 
 export default async function LangLayout({
@@ -86,6 +81,48 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>
 }) {
   const { lang } = await params
+  const isEn = lang === 'en'
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Person',
+        name: 'Orik',
+        jobTitle: isEn ? 'AI Developer' : 'AI-разработчик',
+        url: 'https://orikai.dev',
+        sameAs: ['https://t.me/orhan_yunuszade'],
+        knowsAbout: ['Next.js', 'Python', 'Telegram Bots', 'n8n', 'AI Automation', 'Web Development', 'WhatsApp Bots', 'Make', 'CRM Integration'],
+      },
+      {
+        '@type': 'WebSite',
+        name: 'orikai.dev',
+        url: 'https://orikai.dev',
+        inLanguage: isEn ? 'en' : 'ru',
+      },
+      {
+        '@type': 'ProfessionalService',
+        name: isEn ? 'Orik — AI Developer' : 'Orik — AI-разработчик',
+        url: 'https://orikai.dev',
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'customer service',
+          url: 'https://t.me/orhan_yunuszade',
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: isEn ? 'Development Services' : 'Услуги разработки',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: isEn ? 'Websites & Landing Pages' : 'Сайты и лендинги' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: isEn ? 'Telegram & WhatsApp Bots' : 'Telegram и WhatsApp боты' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: isEn ? 'Workflow Automation (n8n, Make, CRM)' : 'Автоматизация (n8n, Make, CRM)' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: isEn ? 'Web Applications' : 'Веб-приложения' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: isEn ? 'Custom Software' : 'ПО под заказ' } },
+          ],
+        },
+      },
+    ],
+  }
 
   return (
     <html

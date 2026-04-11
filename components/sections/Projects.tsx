@@ -6,37 +6,92 @@ import { useTranslation } from '@/lib/i18n/useTranslation'
 export default function Projects() {
   const { t } = useTranslation()
   const sectionRef = useRef<HTMLElement>(null)
+  const numRefs = useRef<(HTMLSpanElement | null)[]>([])
 
   useEffect(() => {
     if (typeof window === 'undefined') return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     const cards = sectionRef.current?.querySelectorAll<HTMLElement>('[data-card]')
     if (!cards) return
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            cards.forEach((card, i) => {
-              card.style.transition = `opacity 0.7s ease ${i * 0.15}s, transform 0.7s ease ${i * 0.15}s`
-              card.style.opacity = '1'
-              card.style.transform = 'translateY(0)'
-            })
-            observer.disconnect()
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
+    // ── Card entrance (slide-up) ─────────────────────────────────
+    if (!reducedMotion) {
+      const cardObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              cards.forEach((card, i) => {
+                card.style.transition = `opacity 0.7s ease ${i * 0.15}s, transform 0.7s ease ${i * 0.15}s`
+                card.style.opacity = '1'
+                card.style.transform = 'translateY(0)'
+              })
+              cardObserver.disconnect()
+            }
+          })
+        },
+        { threshold: 0.1 }
+      )
+      if (sectionRef.current) cardObserver.observe(sectionRef.current)
+      cards.forEach((card) => {
+        card.style.opacity = '0'
+        card.style.transform = 'translateY(40px)'
+      })
+    }
 
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    cards.forEach((card) => {
-      card.style.opacity = '0'
-      card.style.transform = 'translateY(40px)'
+    // ── Number light-up: individual scroll + cursor hover ────────
+    const numObservers: IntersectionObserver[] = []
+    const cleanups: (() => void)[] = []
+
+    cards.forEach((card, i) => {
+      const numEl = numRefs.current[i]
+      if (!numEl) return
+
+      numEl.style.transition = 'opacity 0.4s ease, text-shadow 0.4s ease'
+      numEl.style.opacity = '0.3'
+      numEl.style.textShadow = 'none'
+
+      const handleEnter = () => {
+        if (numEl.dataset.lit === 'true') return
+        numEl.style.opacity = '0.75'
+        numEl.style.textShadow = '0 0 16px rgba(200,255,0,0.35)'
+      }
+      const handleLeave = () => {
+        if (numEl.dataset.lit === 'true') return
+        numEl.style.opacity = '0.3'
+        numEl.style.textShadow = 'none'
+      }
+      card.addEventListener('mouseenter', handleEnter)
+      card.addEventListener('mouseleave', handleLeave)
+      cleanups.push(() => {
+        card.removeEventListener('mouseenter', handleEnter)
+        card.removeEventListener('mouseleave', handleLeave)
+      })
+
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              numEl.dataset.lit = 'true'
+              numEl.style.transition = 'opacity 1.8s ease, text-shadow 1.8s ease'
+              numEl.style.opacity = '1'
+              numEl.style.textShadow = '0 0 28px rgba(200,255,0,0.65)'
+              card.removeEventListener('mouseenter', handleEnter)
+              card.removeEventListener('mouseleave', handleLeave)
+              obs.disconnect()
+            }
+          })
+        },
+        { threshold: 0.55 }
+      )
+      obs.observe(card)
+      numObservers.push(obs)
     })
 
-    return () => observer.disconnect()
+    return () => {
+      numObservers.forEach((obs) => obs.disconnect())
+      cleanups.forEach((fn) => fn())
+    }
   }, [])
 
   return (
@@ -64,16 +119,20 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {t.projects.items.map((project, i) => (
-            <div
+            <a
               key={i}
               data-card
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative flex flex-col p-8 border border-dashed transition-all duration-300 hover:-translate-y-1"
               style={{
                 borderColor: 'var(--border)',
                 background: 'var(--bg)',
+                textDecoration: 'none',
               }}
             >
-              {/* Accent glow */}
+              {/* Accent glow on hover */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{ boxShadow: '0 0 24px rgba(200,255,0,0.06), inset 0 0 0 1px var(--accent)' }}
@@ -81,6 +140,7 @@ export default function Projects() {
 
               {/* Number */}
               <span
+                ref={(el) => { numRefs.current[i] = el }}
                 className="text-5xl mb-6 block"
                 style={{
                   fontFamily: 'var(--font-bebas)',
@@ -100,19 +160,19 @@ export default function Projects() {
 
               <p
                 className="text-sm leading-relaxed mb-6 flex-1"
-                style={{ color: 'var(--muted)', fontFamily: 'var(--font-space)' }}
+                style={{ color: 'var(--muted)', fontFamily: 'var(--font-ibm)' }}
               >
                 {project.desc}
               </p>
 
-              {/* Tags */}
+              {/* Tags — accent border */}
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
                     className="text-xs px-2 py-1 border border-dashed uppercase tracking-wider"
                     style={{
-                      borderColor: 'var(--border)',
+                      borderColor: 'var(--accent)',
                       color: 'var(--muted)',
                       fontFamily: 'var(--font-space)',
                     }}
@@ -121,7 +181,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

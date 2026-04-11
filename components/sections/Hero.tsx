@@ -20,7 +20,6 @@ const HeroScene = dynamic(() => import('@/components/three/HeroScene'), {
 export default function Hero() {
   const { t } = useTranslation()
   const contentRef = useRef<HTMLDivElement>(null)
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
   useEffect(() => {
     const el = contentRef.current
@@ -54,11 +53,9 @@ export default function Hero() {
       style={{ background: 'var(--bg)' }}
     >
       {/* 3D Canvas */}
-      {!isMobile && (
-        <div className="absolute inset-0 z-0">
-          <HeroScene />
-        </div>
-      )}
+      <div className="absolute inset-0 z-0">
+        <HeroScene />
+      </div>
 
       {/* Halftone decoration */}
       <div

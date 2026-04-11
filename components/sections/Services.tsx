@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from '@/lib/i18n/useTranslation'
 
-const icons = ['◈', '◉', '⬡', '◫', '⟁']
+const icons = ['◈', '◉', '⬡', '◫', '⟁', '⟴']
 
 export default function Services() {
   const { t } = useTranslation()
@@ -100,7 +100,7 @@ export default function Services() {
               </h3>
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: 'var(--muted)', fontFamily: 'var(--font-space)' }}
+                style={{ color: 'var(--muted)', fontFamily: 'var(--font-ibm)' }}
               >
                 {item.desc}
               </p>

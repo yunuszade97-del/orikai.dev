@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 export default function Loader() {
   const [visible, setVisible] = useState(false)
   const [chars, setChars] = useState<string[]>([])
-  const letters = ['O', 'R', 'I', 'K']
+  const letters = ['O', 'R', 'I', 'C']
 
   useEffect(() => {
     if (typeof window === 'undefined') return

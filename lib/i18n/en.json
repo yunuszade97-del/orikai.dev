@@ -8,7 +8,7 @@
   "hero": {
     "label": "AI DEVELOPER",
     "title": "ORIK —\nAI DEVELOPER",
-    "subtitle": "I build websites, bots & automation —\nfast, smart, with AI",
+    "subtitle": "Websites, Telegram bots & AI automation —\nshipped in days, not weeks",
     "cta_primary": "Message on Telegram",
     "cta_secondary": "View Projects"
   },
@@ -34,7 +34,11 @@
       },
       {
         "title": "Custom Software",
-        "desc": "Any idea → working product"
+        "desc": "MVP from scratch — from spec to deployed product in 2 weeks"
+      },
+      {
+        "title": "AI Integrations",
+        "desc": "ChatGPT, Claude, Whisper and other models wired into your product — chat support, voice, content generation"
       }
     ]
   },
@@ -45,17 +49,20 @@
       {
         "title": "Doctor's Business Card Site",
         "desc": "Medical business card site for a urology surgeon. Telegram booking, map, contacts.",
-        "tags": ["Website", "Healthcare", "Telegram CTA"]
+        "tags": ["Website", "Healthcare", "Telegram CTA"],
+        "link": "https://urolog.vercel.app/"
       },
       {
         "title": "HR Bot for Gym",
-        "desc": "Telegram bot for gym trainer hiring. Automates applications and initial screening interviews.",
-        "tags": ["Telegram Bot", "AI", "HR Automation"]
+        "desc": "Telegram bot for gym trainer hiring. Automated intake and AI screening — cut response time from 3 days to 15 minutes.",
+        "tags": ["Telegram Bot", "AI", "HR Automation"],
+        "link": "https://t.me/hr777777_bot"
       },
       {
-        "title": "Daily Planner",
-        "desc": "Web app with daily planner, yearly overview, notes, and subscription model.",
-        "tags": ["Web App", "SaaS", "Subscription"]
+        "title": "Travel Agency Website",
+        "desc": "Website for a travel agency with tour catalog, filters, and online booking requests.",
+        "tags": ["Website", "Travel", "Booking"],
+        "link": "https://tropapiter.ru/"
       }
     ]
   },
@@ -71,7 +78,7 @@
   "about": {
     "label": "04 / ABOUT",
     "title": "WHO I AM",
-    "text": "I'm Orik, an AI developer with hands-on experience building products at the intersection of AI and the web. Bots, automation, web apps — from idea to working product. I work fast — AI multiplies development speed."
+    "text": "I'm Orik, an AI developer with hands-on experience building products at the intersection of AI and the web. Bots, automation, web apps — from idea to working product. I work fast — AI cuts dev time 3–5×. Most projects ship in 1–2 weeks."
   },
   "contact": {
     "label": "05 / CONTACT",
