@@ -2,6 +2,7 @@
   "nav": {
     "services": "Services",
     "projects": "Projects",
+    "pricing": "Pricing",
     "about": "About",
     "contact": "Contact"
   },
@@ -66,8 +67,52 @@
       }
     ]
   },
+  "pricing": {
+    "label": "03 / PRICING",
+    "title": "PRICING",
+    "fullPriceBtn": "Full Price",
+    "note": "Starting prices · Final quote depends on scope · 50% upfront · 2 rounds of revisions included",
+    "items": [
+      {
+        "title": "Websites & landings",
+        "desc": "Landing pages, business cards, corporate sites",
+        "price": "from $400",
+        "timeline": "3–14 days"
+      },
+      {
+        "title": "Telegram / WhatsApp bots",
+        "desc": "From basic menus to AI-powered funnels",
+        "price": "from $450",
+        "timeline": "3–18 days"
+      },
+      {
+        "title": "Automation",
+        "desc": "n8n, Make, CRM integrations — end-to-end",
+        "price": "from $240",
+        "timeline": "1–14 days"
+      },
+      {
+        "title": "AI integrations",
+        "desc": "LLMs, AI agents, RAG, multi-agent systems",
+        "price": "from $600",
+        "timeline": "3–30 days"
+      },
+      {
+        "title": "Packages",
+        "desc": "Starter · Business · AI Business · MVP",
+        "price": "from $500",
+        "timeline": "4–14 days"
+      },
+      {
+        "title": "Monthly retainer",
+        "desc": "Support, new features, ongoing development",
+        "price": "from $200/mo",
+        "timeline": "ongoing"
+      }
+    ]
+  },
   "how": {
-    "label": "03 / PROCESS",
+    "label": "04 / PROCESS",
     "title": "HOW WE WORK",
     "steps": [
       { "num": "01", "text": "We discuss your task on Telegram" },
@@ -76,12 +121,12 @@
     ]
   },
   "about": {
-    "label": "04 / ABOUT",
+    "label": "05 / ABOUT",
     "title": "WHO I AM",
     "text": "I'm Orik, an AI developer with hands-on experience building products at the intersection of AI and the web. Bots, automation, web apps — from idea to working product. I work fast — AI cuts dev time 3–5×. Most projects ship in 1–2 weeks."
   },
   "contact": {
-    "label": "05 / CONTACT",
+    "label": "06 / CONTACT",
     "title": "GOT A PROJECT?",
     "text": "Message me on Telegram — I reply within an hour.",
     "cta": "Message @orhan_yunuszade"
