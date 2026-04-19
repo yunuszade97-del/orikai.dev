@@ -52,7 +52,7 @@ export default function Navbar() {
         ))}
         <Link
           href={pricingHref}
-          className="text-xs uppercase tracking-widest px-3 py-1 border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-black transition-all duration-200"
+          className="text-xs uppercase tracking-widest text-[var(--muted)] hover:text-[var(--accent)] transition-colors duration-200"
           style={{ fontFamily: 'var(--font-space)' }}
         >
           {t.nav.pricing}
@@ -101,7 +101,7 @@ export default function Navbar() {
           <Link
             href={pricingHref}
             onClick={() => setMenuOpen(false)}
-            className="text-sm uppercase tracking-widest text-[var(--accent)] border border-[var(--accent)] px-3 py-1 self-start hover:bg-[var(--accent)] hover:text-black transition-all"
+            className="text-sm uppercase tracking-widest text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
             style={{ fontFamily: 'var(--font-space)' }}
           >
             {t.nav.pricing}

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import CustomCursor from '@/components/ui/CustomCursor'
 
 export async function generateMetadata({
   params,
@@ -333,6 +334,7 @@ export default async function PricingPage({ params }: { params: Promise<{ lang: 
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600&display=swap"
       />
+      <CustomCursor />
       <div className="pr-body">
         {/* HEADER */}
         <header className="pr-header">
