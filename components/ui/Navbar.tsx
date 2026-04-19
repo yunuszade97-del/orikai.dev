@@ -11,6 +11,8 @@ export default function Navbar() {
   const otherLang = lang === 'ru' ? 'en' : 'ru'
   const otherHref = lang === 'ru' ? '/en' : '/'
 
+  const pricingHref = lang === 'ru' ? '/ru/pricing' : '/en/pricing'
+
   const links = [
     { href: '#services', label: t.nav.services },
     { href: '#projects', label: t.nav.projects },
@@ -48,6 +50,13 @@ export default function Navbar() {
             {l.label}
           </a>
         ))}
+        <Link
+          href={pricingHref}
+          className="text-xs uppercase tracking-widest px-3 py-1 border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-black transition-all duration-200"
+          style={{ fontFamily: 'var(--font-space)' }}
+        >
+          {t.nav.pricing}
+        </Link>
       </div>
 
       {/* Lang switcher + hamburger */}
@@ -89,6 +98,14 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+          <Link
+            href={pricingHref}
+            onClick={() => setMenuOpen(false)}
+            className="text-sm uppercase tracking-widest text-[var(--accent)] border border-[var(--accent)] px-3 py-1 self-start hover:bg-[var(--accent)] hover:text-black transition-all"
+            style={{ fontFamily: 'var(--font-space)' }}
+          >
+            {t.nav.pricing}
+          </Link>
         </div>
       )}
     </nav>
