@@ -96,7 +96,7 @@ export async function GET() {
             gap: '8px',
           }}
         >
-          <span style={{ display: 'flex' }}>t.me/orhan_yunuszade</span>
+          <span style={{ display: 'flex' }}>t.me/Orik_Y</span>
         </div>
 
         {/* Decorative corner element */}

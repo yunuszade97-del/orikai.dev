@@ -91,7 +91,7 @@ export default async function LangLayout({
         name: 'Orik',
         jobTitle: isEn ? 'AI Developer' : 'AI-разработчик',
         url: 'https://orikai.dev',
-        sameAs: ['https://t.me/orhan_yunuszade'],
+        sameAs: ['https://t.me/Orik_Y'],
         knowsAbout: ['Next.js', 'Python', 'Telegram Bots', 'n8n', 'AI Automation', 'Web Development', 'WhatsApp Bots', 'Make', 'CRM Integration'],
       },
       {
@@ -107,7 +107,7 @@ export default async function LangLayout({
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'customer service',
-          url: 'https://t.me/orhan_yunuszade',
+          url: 'https://t.me/Orik_Y',
         },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',

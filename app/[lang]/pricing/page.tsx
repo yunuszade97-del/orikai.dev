@@ -493,7 +493,7 @@ export default async function PricingPage({ params }: { params: Promise<{ lang: 
               <h3>{t.ctaTitle}</h3>
               <p>{t.ctaSub}</p>
             </div>
-            <a className="pr-cta-btn" href="https://t.me/orhan_yunuszade">@orhan_yunuszade →</a>
+            <a className="pr-cta-btn" href="https://t.me/Orik_Y">@Orik_Y →</a>
           </div>
         </main>
 

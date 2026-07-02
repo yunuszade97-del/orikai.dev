@@ -65,7 +65,7 @@ export default function Contact() {
         </p>
 
         <h2
-          className="text-7xl md:text-9xl mb-6"
+          className="text-5xl sm:text-6xl md:text-9xl mb-6 break-words"
           style={{ fontFamily: 'var(--font-bebas)', color: 'var(--text)' }}
         >
           {t.contact.title}
@@ -78,7 +78,7 @@ export default function Contact() {
           {t.contact.text}
         </p>
 
-        <Button href="https://t.me/orhan_yunuszade" variant="primary" className="text-base px-10 py-4">
+        <Button href="https://t.me/Orik_Y" variant="primary" className="text-base px-10 py-4">
           {t.contact.cta} →
         </Button>
       </div>
