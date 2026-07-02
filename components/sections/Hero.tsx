@@ -1,25 +1,34 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Button from '@/components/ui/Button'
 import { useTranslation } from '@/lib/i18n/useTranslation'
 
+const heroGradientFallback = (
+  <div
+    className="absolute inset-0"
+    style={{
+      background: 'radial-gradient(ellipse at 70% 50%, rgba(200,255,0,0.04) 0%, transparent 70%)',
+    }}
+  />
+)
+
 const HeroScene = dynamic(() => import('@/components/three/HeroScene'), {
   ssr: false,
-  loading: () => (
-    <div
-      className="absolute inset-0"
-      style={{
-        background: 'radial-gradient(ellipse at 70% 50%, rgba(200,255,0,0.04) 0%, transparent 70%)',
-      }}
-    />
-  ),
+  loading: () => heroGradientFallback,
 })
 
 export default function Hero() {
   const { t } = useTranslation()
   const contentRef = useRef<HTMLDivElement>(null)
+  const [show3D, setShow3D] = useState(false)
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const isMobile = window.matchMedia('(max-width: 767px)').matches
+    setShow3D(!reducedMotion && !isMobile)
+  }, [])
 
   useEffect(() => {
     const el = contentRef.current
@@ -52,9 +61,9 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{ background: 'var(--bg)' }}
     >
-      {/* 3D Canvas */}
+      {/* 3D Canvas (desktop only — skipped on mobile / reduced-motion) */}
       <div className="absolute inset-0 z-0">
-        <HeroScene />
+        {show3D ? <HeroScene /> : heroGradientFallback}
       </div>
 
       {/* Halftone decoration */}
@@ -87,7 +96,7 @@ export default function Hero() {
 
         <h1
           data-reveal
-          className="text-7xl md:text-9xl lg:text-[10rem] leading-none mb-6"
+          className="text-5xl sm:text-6xl md:text-9xl lg:text-[10rem] leading-none mb-6 break-words"
           style={{
             fontFamily: 'var(--font-bebas)',
             color: 'var(--text)',
@@ -114,7 +123,7 @@ export default function Hero() {
         </p>
 
         <div data-reveal className="flex flex-wrap gap-4">
-          <Button href="https://t.me/orhan_yunuszade" variant="primary">
+          <Button href="https://t.me/Orik_Y" variant="primary">
             {t.hero.cta_primary} →
           </Button>
           <Button
