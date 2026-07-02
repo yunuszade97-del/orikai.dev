@@ -125,7 +125,7 @@ export default function Projects() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col p-8 border border-dashed transition-all duration-300 hover:-translate-y-1"
+              className="group relative flex flex-col p-8 border transition-all duration-300 hover:-translate-y-1"
               style={{
                 borderColor: 'var(--border)',
                 background: 'var(--bg)',
@@ -165,15 +165,15 @@ export default function Projects() {
                 {project.desc}
               </p>
 
-              {/* Tags — accent border */}
+              {/* Tags — filled accent badge */}
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-1 border border-dashed uppercase tracking-wider"
+                    className="text-xs px-2 py-1 uppercase tracking-wider"
                     style={{
-                      borderColor: 'var(--accent)',
-                      color: 'var(--muted)',
+                      background: 'rgba(200,255,0,0.08)',
+                      color: 'var(--accent)',
                       fontFamily: 'var(--font-space)',
                     }}
                   >
