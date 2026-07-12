@@ -48,10 +48,10 @@
     "title": "КЕЙСЫ",
     "items": [
       {
-        "title": "Сайт-визитка врача",
-        "desc": "Сайт-визитка для врача уролога-хирурга. Онлайн-запись через Telegram, карта проезда, контакты.",
-        "tags": ["Website", "Healthcare", "Telegram CTA"],
-        "link": "https://urolog.vercel.app/"
+        "title": "ERP для строительной компании",
+        "desc": "ERP/CRM для строительной компании: розница, стройка и аренда техники в одной системе. Заменила учёт в Excel и WhatsApp — единая база контрагентов, финансы и аналитика в реальном времени.",
+        "tags": ["ERP", "Construction", "Next.js"],
+        "link": "https://globalst-erp-k17l.vercel.app/demo/dashboard"
       },
       {
         "title": "HR-бот для фитнес-клуба",

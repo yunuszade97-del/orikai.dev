@@ -48,10 +48,10 @@
     "title": "CASE STUDIES",
     "items": [
       {
-        "title": "Doctor's Business Card Site",
-        "desc": "Medical business card site for a urology surgeon. Telegram booking, map, contacts.",
-        "tags": ["Website", "Healthcare", "Telegram CTA"],
-        "link": "https://urolog.vercel.app/"
+        "title": "ERP for Construction Company",
+        "desc": "ERP/CRM for a construction company: retail, builds, and equipment rental in one system. Replaced Excel and WhatsApp tracking — unified counterparty base, finance ledger, and real-time analytics.",
+        "tags": ["ERP", "Construction", "Next.js"],
+        "link": "https://globalst-erp-k17l.vercel.app/demo/dashboard"
       },
       {
         "title": "HR Bot for Gym",
