@@ -94,10 +94,23 @@ h1, h2, h3, h4 {
 .font-mono-body { font-family: 'IBM Plex Mono', monospace; }
 .font-ui { font-family: 'Space Mono', monospace; }
 
+/* ─── Terminal Cursor ───────────────────────────────────────── */
+.cursor-blink {
+  color: var(--accent);
+  animation: cursor-blink 1.1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  50% { opacity: 0; }
+}
+
 /* ─── prefers-reduced-motion ────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+  .cursor-blink {
+    animation: none !important;
   }
 }

@@ -120,6 +120,7 @@ export default function Hero() {
           }}
         >
           {t.hero.subtitle}
+          <span className="cursor-blink">_</span>
         </p>
 
         <div data-reveal className="flex flex-wrap gap-4">

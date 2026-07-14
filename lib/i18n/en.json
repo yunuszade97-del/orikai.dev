@@ -7,84 +7,84 @@
     "pricing": "Pricing"
   },
   "hero": {
-    "label": "AI DEVELOPER",
+    "label": "// AI DEVELOPER",
     "title": "ORIK —\nAI DEVELOPER",
-    "subtitle": "Websites, Telegram bots & AI automation —\nshipped in days, not weeks",
-    "cta_primary": "Message on Telegram",
-    "cta_secondary": "View Projects"
+    "subtitle": "Websites, Telegram bots, AI automation.\nLanding — 5 days. Bot — a week. MVP — two",
+    "cta_primary": "Discuss it on Telegram",
+    "cta_secondary": "See case studies"
   },
   "services": {
-    "label": "01 / SERVICES",
+    "label": "01 // SERVICES",
     "title": "WHAT I DO",
     "items": [
       {
         "title": "Websites & Landing Pages",
-        "desc": "Fast, responsive, SEO-ready websites built end-to-end"
+        "desc": "Next.js, responsive, SEO out of the box. Brief to production in 3–5 days."
       },
       {
         "title": "Telegram & WhatsApp Bots",
-        "desc": "AI-powered bots with forms, payments and integrations"
+        "desc": "Menus, forms, payments, AI dialogue. Your bot answers customers while you sleep."
       },
       {
         "title": "Automation",
-        "desc": "n8n, Make, CRM integrations — eliminate manual work"
+        "desc": "n8n, Make, CRM integrations. Scripts take the routine — your team does real work."
       },
       {
         "title": "Web Applications",
-        "desc": "SaaS, planners, platforms, subscription models"
+        "desc": "SaaS, planners, subscription platforms. From data model to production."
       },
       {
         "title": "Custom Software",
-        "desc": "MVP from scratch — from spec to deployed product in 2 weeks"
+        "desc": "MVP in 2 weeks: spec → code → production. No bloated estimates, no endless calls."
       },
       {
         "title": "AI Integrations",
-        "desc": "ChatGPT, Claude, Whisper and other models wired into your product — chat support, voice, content generation"
+        "desc": "ChatGPT, Claude, Whisper inside your product: chat support, voice, content generation."
       }
     ]
   },
   "projects": {
-    "label": "02 / PROJECTS",
+    "label": "02 // PROJECTS",
     "title": "CASE STUDIES",
     "items": [
       {
         "title": "ERP for Construction Company",
-        "desc": "ERP/CRM for a construction company: retail, builds, and equipment rental in one system. Replaced Excel and WhatsApp tracking — unified counterparty base, finance ledger, and real-time analytics.",
+        "desc": "Retail, construction and equipment rental in one system instead of Excel and WhatsApp. Unified client base, finance and real-time analytics.",
         "tags": ["ERP", "Construction", "Next.js"],
         "link": "https://globalst-erp-k17l.vercel.app/demo/dashboard"
       },
       {
         "title": "HR Bot for Gym",
-        "desc": "Telegram bot for gym trainer hiring. Automated intake and AI screening — cut response time from 3 days to 15 minutes.",
+        "desc": "Telegram bot for hiring trainers: takes applications and runs AI screening. Candidate processing — was 3 days, now 15 minutes.",
         "tags": ["Telegram Bot", "AI", "HR Automation"],
         "link": "https://t.me/hr777777_bot"
       },
       {
         "title": "Travel Agency Website",
-        "desc": "Website for a travel agency with tour catalog, filters, and online booking requests.",
+        "desc": "Tour catalog, filters, online booking. Clients pick a tour in minutes — no call to a manager.",
         "tags": ["Website", "Travel", "Booking"],
         "link": "https://tropapiter.ru/"
       }
     ]
   },
   "how": {
-    "label": "03 / PROCESS",
+    "label": "03 // PROCESS",
     "title": "HOW WE WORK",
     "steps": [
-      { "num": "01", "text": "We discuss your task on Telegram" },
-      { "num": "02", "text": "I propose a solution and timeline" },
-      { "num": "03", "text": "I deliver the finished product" }
+      { "num": "01", "text": "Message me on Telegram — plain words are fine" },
+      { "num": "02", "text": "I come back with a plan: solution, timeline, fixed price" },
+      { "num": "03", "text": "I ship the product — you test it live" }
     ]
   },
   "about": {
-    "label": "04 / ABOUT",
+    "label": "04 // ABOUT",
     "title": "WHO I AM",
-    "text": "I'm Orik, an AI developer with hands-on experience building products at the intersection of AI and the web. Bots, automation, web apps — from idea to working product. I work fast — AI cuts dev time 3–5×. Most projects ship in 1–2 weeks."
+    "text": "I'm Orik, an AI developer. I build products where AI meets the web: bots, automation, web apps. Working in tandem with AI cuts dev time 3–5× — most projects hit production in 1–2 weeks."
   },
   "contact": {
-    "label": "05 / CONTACT",
+    "label": "05 // CONTACT",
     "title": "GOT A PROJECT?",
-    "text": "Message me on Telegram — I reply within an hour.",
+    "text": "> describe your task on Telegram\n> I reply within an hour",
     "cta": "Message @Orik_Y"
   }
 }

@@ -73,9 +73,10 @@ export default function Contact() {
 
         <p
           className="text-base md:text-lg mb-10"
-          style={{ color: 'var(--muted)', fontFamily: 'var(--font-ibm)' }}
+          style={{ color: 'var(--muted)', fontFamily: 'var(--font-ibm)', whiteSpace: 'pre-line' }}
         >
           {t.contact.text}
+          <span className="cursor-blink">_</span>
         </p>
 
         <Button href="https://t.me/Orik_Y" variant="primary" className="text-base px-10 py-4">
