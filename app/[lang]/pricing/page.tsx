@@ -218,16 +218,16 @@ function getT(lang: string): T {
 
   const pkgs = isEn
     ? [
-        { name: 'STARTER', tag: '"Just go online"', items: ['Landing page (1 page)', 'Telegram form / CTA', 'Analytics setup'], price: '$500', meta: '4–5 days' },
-        { name: 'BUSINESS', tag: '"Site + Bot"', items: ['Business card site (3–5 pages)', 'Basic Telegram bot', 'Lead automation'], price: '$1 350', meta: '10 days · save ~20%' },
-        { name: 'AI BUSINESS', tag: '"Smart office"', items: ['Website', 'AI Telegram bot (GPT/Claude)', 'CRM integration', 'Onboarding guide'], price: '$2 300', meta: '14 days · save ~20%', featured: true, badge: 'POPULAR' },
-        { name: 'MVP', tag: '"Ship your product"', items: ['Web app (up to 5 screens)', 'Deployment (Vercel/Railway)', '2 weeks post-launch support'], price: '$3 100', meta: '14 days' },
+        { name: 'STARTER', tag: '"Online by Friday"', items: ['Landing page (1 page)', 'Telegram form / CTA', 'Analytics setup'], price: '$500', meta: '4–5 days' },
+        { name: 'BUSINESS', tag: '"Site + bot, wired together"', items: ['Business card site (3–5 pages)', 'Basic Telegram bot', 'Lead automation'], price: '$1 350', meta: '10 days · save ~20%' },
+        { name: 'AI BUSINESS', tag: '"An office that answers itself"', items: ['Website', 'AI Telegram bot (GPT/Claude)', 'CRM integration', 'Onboarding guide'], price: '$2 300', meta: '14 days · save ~20%', featured: true, badge: 'POPULAR' },
+        { name: 'MVP', tag: '"Idea → production in 14 days"', items: ['Web app (up to 5 screens)', 'Deployment (Vercel/Railway)', '2 weeks post-launch support'], price: '$3 100', meta: '14 days' },
       ]
     : [
-        { name: 'STARTER', tag: '"Просто онлайн"', items: ['Лендинг (1 страница)', 'Telegram-форма / кнопка', 'Подключение аналитики'], price: '$500', meta: '4–5 дней · ₽38 000' },
-        { name: 'BUSINESS', tag: '"Сайт + Бот"', items: ['Сайт-визитка (3–5 стр.)', 'Базовый Telegram-бот', 'Автоматизация лидов'], price: '$1 350', meta: '10 дней · ₽100 000 · экономия ~20%' },
-        { name: 'AI BUSINESS', tag: '"Умный офис"', items: ['Сайт-визитка', 'Telegram-бот с AI (GPT/Claude)', 'CRM-интеграция', 'Онбординг-инструкция'], price: '$2 300', meta: '14 дней · ₽170 000 · экономия ~20%', featured: true, badge: 'ХИТ' },
-        { name: 'MVP', tag: '"Запустить продукт"', items: ['Веб-приложение (до 5 экранов)', 'Деплой (Vercel/Railway)', '2 недели пост-лонч поддержки'], price: '$3 100', meta: '14 дней · ₽230 000' },
+        { name: 'STARTER', tag: '"Онлайн к пятнице"', items: ['Лендинг (1 страница)', 'Telegram-форма / кнопка', 'Подключение аналитики'], price: '$500', meta: '4–5 дней · ₽38 000' },
+        { name: 'BUSINESS', tag: '"Сайт + бот в связке"', items: ['Сайт-визитка (3–5 стр.)', 'Базовый Telegram-бот', 'Автоматизация лидов'], price: '$1 350', meta: '10 дней · ₽100 000 · экономия ~20%' },
+        { name: 'AI BUSINESS', tag: '"Офис, который отвечает сам"', items: ['Сайт-визитка', 'Telegram-бот с AI (GPT/Claude)', 'CRM-интеграция', 'Онбординг-инструкция'], price: '$2 300', meta: '14 дней · ₽170 000 · экономия ~20%', featured: true, badge: 'ХИТ' },
+        { name: 'MVP', tag: '"Идея → прод за 14 дней"', items: ['Веб-приложение (до 5 экранов)', 'Деплой (Vercel/Railway)', '2 недели пост-лонч поддержки'], price: '$3 100', meta: '14 дней · ₽230 000' },
       ]
 
   const terms = isEn
@@ -253,8 +253,8 @@ function getT(lang: string): T {
     heroLabel: isEn ? 'ORIKAI.DEV — PRICING 2026' : 'ORIKAI.DEV — ПРАЙС 2026',
     heroTitle: isEn ? <><em>Websites.</em> Bots.<br /><em>Automation. AI.</em></> : <><em>Сайты.</em> Боты.<br /><em>Автоматизация. AI.</em></>,
     heroSub: isEn
-      ? ['Delivered in days, not months', 'AI speeds up development 3–5×', '50% upfront · 2 revisions included']
-      : ['Сдаю за дни, не месяцы', 'AI ускоряет разработку в 3–5 раз', '50% предоплата · 2 раунда правок включены'],
+      ? ['Landing in 5 days · MVP in two weeks', 'AI speeds up development 3–5×', '50% upfront · 2 revision rounds included']
+      : ['Лендинг за 5 дней · MVP за две недели', 'AI ускоряет разработку в 3–5 раз', '50% предоплата · 2 раунда правок включены'],
     s01: isEn ? 'WEBSITES & LANDINGS' : 'САЙТЫ И ЛЕНДИНГИ',
     s02: isEn ? 'TELEGRAM / WHATSAPP BOTS' : 'TELEGRAM / WHATSAPP БОТЫ',
     s03: isEn ? 'AUTOMATION' : 'АВТОМАТИЗАЦИЯ',
@@ -283,7 +283,7 @@ function getT(lang: string): T {
       : '<strong>Субподряд для агентств:</strong> $45–65/час · $300–450/день · NDA по запросу · White label',
     terms,
     ctaTitle: isEn ? 'Got a project?' : 'Есть задача?',
-    ctaSub: isEn ? 'Send a message — I reply within an hour.' : 'Напишите в Telegram — отвечу в течение часа.',
+    ctaSub: isEn ? '> describe your task — I reply within an hour' : '> опишите задачу — отвечу в течение часа',
   }
 }
 
